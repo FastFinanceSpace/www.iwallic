@@ -1,0 +1,38 @@
+{
+  "name": "www.iwallic",
+  "version": "0.0.1",
+  "description": "homepage of iwallic",
+  "main": "index.js",
+  "repository": "https://github.com/ext-studio/www.iwallic.git",
+  "author": "ext-studio",
+  "license": "GPL-3.0",
+  "private": true,
+  "scripts": {
+    "http": "http-server dist -p 3001 -c-1 --cors",
+    "build": "rimraf ./dist && yarn webpack -- --config build/webpack.config.js --progress --profile --bail",
+    "webpack": "node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js",
+    "prod": "yarn build && http-server dist -p 3001 -c-1 --cors",
+    "dev": "yarn webpack-dev-server -- --config build/webpack.dev.config.js --open --progress --profile --watch --content-base src/",
+    "webpack-dev-server": "node --max_old_space_size=4096 node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.11.1",
+    "node-sass": "^4.9.0",
+    "optimize-css-assets-webpack-plugin": "3.2.0",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "to-string-loader": "^1.1.5",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "3.11.0",
+    "webpack-dev-server": "2.7.1"
+  }
+}

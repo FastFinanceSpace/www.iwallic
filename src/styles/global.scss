@@ -1,0 +1,19 @@
+@import "./var";
+
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    width: 100%;
+    min-height: 100%;
+}
+* {
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+span#iwallic {
+    color: map-get($colors, primary);
+}
