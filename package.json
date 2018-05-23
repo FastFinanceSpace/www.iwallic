@@ -9,10 +9,10 @@
   "private": true,
   "scripts": {
     "http": "http-server dist -p 3001 -c-1 --cors",
-    "build": "rimraf ./dist && yarn webpack -- --config build/webpack.config.js --progress --profile --bail",
+    "build": "rimraf ./dist && yarn webpack --config build/webpack.config.js --progress --profile --bail",
     "webpack": "node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js",
     "prod": "yarn build && http-server dist -p 3001 -c-1 --cors",
-    "dev": "yarn webpack-dev-server -- --config build/webpack.dev.config.js --open --progress --profile --watch --content-base src/",
+    "dev": "yarn webpack-dev-server --config build/webpack.dev.config.js --open --progress --profile --watch --content-base src/",
     "webpack-dev-server": "node --max_old_space_size=4096 node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "dependencies": {
