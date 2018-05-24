@@ -54,7 +54,7 @@ article {
     width: 510px;
     margin-right: 30px;
     display: inline-block;
-    background-image: url("/assets/bg.png");
+    background-image: url("/assets/bg.jpg");
     position: relative;
     img {
       position: absolute;
@@ -78,7 +78,7 @@ article {
       text-align: left;
     }
     .download {
-      padding: 40px 0 30px 0;
+      padding: 40px 15px 30px 15px;
       border-top: 1px solid #d4d7db;
       button {
         color: #fff;
