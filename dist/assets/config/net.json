@@ -1,11 +1,11 @@
 {
     "Test": {
         "API": "https://teapi.iwallic.com",
-        "RPC": "https://seed2.neo.org:20332"
+        "RPC": "https://rpc.testnet.iwallic.com"
     },
     "Main": {
         "API": "https://api.iwallic.com",
-        "RPC": "https://seed2.neo.org:10332"
+        "RPC": "https://rpc.mainnet.iwallic.com"
     },
     "Priv": {
         "API": "http://192.168.1.90:8080",
