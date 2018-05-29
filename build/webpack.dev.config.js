@@ -72,7 +72,7 @@ module.exports = {
       { from: 'src/assets', to: 'assets' },
     ]),
     new HtmlWebpackPlugin({
-      template: 'src/sites/en/index.html',
+      template: 'src/sites/tw/index.html',
       inject: 'body',
       xhtml: true,
       metadata: {

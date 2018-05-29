@@ -1,12 +1,12 @@
+import * as $ from 'jquery';
 import '../styles/global.scss';
 import '../styles/index.scss';
-import * as $ from 'jquery';
 
 $(document).ready(function() {
-  if (window.location.href.indexOf('tw') >= 0) {
-    $('.dropbtn span').text('中文');
-  } else {
+  if (window.location.href.indexOf('en') >= 0) {
     $('.dropbtn span').text('English');
+  } else {
+    $('.dropbtn span').text('中文');
   }
   $('.dropbtn').click(function() {
     $('.dropdown-content').fadeIn('normal');
