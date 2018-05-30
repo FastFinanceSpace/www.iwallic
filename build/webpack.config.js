@@ -65,7 +65,7 @@ plugins: [
       { from: 'src/assets', to: 'assets' },
     ]),
     new HtmlWebpackPlugin({
-      template: 'src/sites/tw/index.html',
+      template: 'src/sites/cn/index.html',
       inject: 'body',
       xhtml: true,
       metadata: {
@@ -97,7 +97,7 @@ plugins: [
       filename: 'en/index.html'
     }),
     new HtmlWebpackPlugin({
-      template: 'src/sites/tw/index.html',
+      template: 'src/sites/cn/index.html',
       inject: 'body',
       xhtml: true,
       metadata: {
@@ -110,7 +110,7 @@ plugins: [
       },
       chunks: 'all',
       excludeChunks: [],
-      filename: 'tw/index.html'
+      filename: 'cn/index.html'
     }),
     new UglifyJsPlugin({
       sourceMap: true,
