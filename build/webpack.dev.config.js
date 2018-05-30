@@ -72,7 +72,7 @@ module.exports = {
       { from: 'src/assets', to: 'assets' },
     ]),
     new HtmlWebpackPlugin({
-      template: 'src/sites/tw/index.html',
+      template: 'src/sites/cn/index.html',
       inject: 'body',
       xhtml: true,
       metadata: {
@@ -104,7 +104,7 @@ module.exports = {
       filename: 'en/index.html'
     }),
     new HtmlWebpackPlugin({
-      template: 'src/sites/tw/index.html',
+      template: 'src/sites/cn/index.html',
       inject: 'body',
       xhtml: true,
       metadata: {
@@ -117,7 +117,7 @@ module.exports = {
       },
       chunks: 'all',
       excludeChunks: [],
-      filename: 'tw/index.html'
+      filename: 'cn/index.html'
     })
   ],
   devServer: {

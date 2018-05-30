@@ -1,0 +1,11 @@
+{
+    "version": "0.0.1",
+    "tag": "Beta",
+    "android": "https://api.iwallic.com/download/android",
+    "ios": "https://api.iwallic.com/download/ios",
+    "disclaimer": {
+        "action": "link",
+        "enabled": false,
+        "data": "https://iwallic.com"
+    }
+}

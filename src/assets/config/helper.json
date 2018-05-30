@@ -1,0 +1,23 @@
+{
+    "walletGuide": {
+        "action": "link",
+        "enabled": false,
+        "data": "https://iwallic.com"
+    },
+    "transactionGuide": {
+        "action": "link",
+        "enabled": false,
+        "data": "https://iwallic.com"
+    },
+    "community": {
+        "action": "link",
+        "enabled": false,
+        "value": "iWallic Forum",
+        "data": "https://iwallic.com"
+    },
+    "contact": {
+        "action": "email",
+        "enabled": false,
+        "data": "iwallic@outlook.com"
+    }
+}

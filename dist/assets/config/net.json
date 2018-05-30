@@ -1,0 +1,14 @@
+{
+    "Test": {
+        "API": "https://teapi.iwallic.com",
+        "RPC": "https://rpc.t.iwallic.com"
+    },
+    "Main": {
+        "API": "https://api.iwallic.com",
+        "RPC": "https://rpc.m.iwallic.com"
+    },
+    "Priv": {
+        "API": "http://192.168.1.90:8080",
+        "RPC": "http://192.168.1.23:20332"
+    }
+}
