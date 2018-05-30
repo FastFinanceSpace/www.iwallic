@@ -18,4 +18,7 @@ $(document).ready(function() {
       $('.dropdown-content').fadeOut('normal');  
     }
   })
+  $('.btn-ios').on('click', function() {
+    alert('coming soon...');
+  })
 });
