@@ -1,10 +1,10 @@
 {
     "version": "0.0.1",
     "tag": "Beta",
-    "link": "https://baidu.com",
+    "link": "https://iwallic.com",
     "disclaimer": {
         "action": "link",
-        "enabled": true,
-        "data": "https://google.com"
+        "enabled": false,
+        "data": "https://iwallic.com"
     }
 }
