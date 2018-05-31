@@ -18,6 +18,7 @@
     "browser": {
         "action": "link",
         "enabled": true,
+        "value": "blolys.com",
         "data": "https://blolys.com"
     },
     "contact": {
