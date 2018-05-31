@@ -4,7 +4,6 @@ nav {
   .dropdown {
     position: absolute;
     top: 10px;
-    right: 60px;
     display: inline-block;
     .dropbtn {
       border-radius: 3px;
@@ -132,10 +131,16 @@ article {
   .isvisibled {
     height: 651px;
   }
+  .dropdown {
+    right: 60px;
+  }
 }
 @media screen and (max-width: 929px) {
   .isvisibled {
     height: 461px;
     display: none !important;
+  }
+  .dropdown {
+    right: 10px;
   }
 }
