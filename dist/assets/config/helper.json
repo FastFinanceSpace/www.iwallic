@@ -12,7 +12,7 @@
     "community": {
         "action": "link",
         "enabled": true,
-        "value": "BBS",
+        "value": "bbs.iwallic.com",
         "data": "https://bbs.iwallic.com"
     },
     "contact": {
