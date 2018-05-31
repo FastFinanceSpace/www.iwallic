@@ -11,9 +11,9 @@
     },
     "community": {
         "action": "link",
-        "enabled": false,
-        "value": "iWallic Forum",
-        "data": "https://iwallic.com"
+        "enabled": true,
+        "value": "BBS",
+        "data": "https://bbs.iwallic.com"
     },
     "contact": {
         "action": "email",
