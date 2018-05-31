@@ -11,13 +11,13 @@
     },
     "community": {
         "action": "link",
-        "enabled": false,
-        "value": "iWallic Forum",
-        "data": "https://iwallic.com"
+        "enabled": true,
+        "value": "bbs.iwallic.com",
+        "data": "https://bbs.iwallic.com"
     },
     "contact": {
         "action": "email",
         "enabled": false,
-        "data": "iwallic@outlook.com"
+        "data": "contact@iwallic.com"
     }
 }
