@@ -15,6 +15,11 @@
         "value": "bbs.iwallic.com",
         "data": "https://bbs.iwallic.com/portal"
     },
+    "browser": {
+        "action": "link",
+        "enabled": true,
+        "data": "https://blolys.com"
+    },
     "contact": {
         "action": "email",
         "enabled": false,
