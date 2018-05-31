@@ -13,7 +13,7 @@
         "action": "link",
         "enabled": true,
         "value": "bbs.iwallic.com",
-        "data": "https://bbs.iwallic.com"
+        "data": "https://bbs.iwallic.com/portal"
     },
     "contact": {
         "action": "email",
