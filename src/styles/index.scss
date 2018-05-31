@@ -1,10 +1,9 @@
 nav {
   position: relative;
   height: 80px;
-  margin-bottom: 70px;
   .dropdown {
     position: absolute;
-    top: 40px;
+    top: 10px;
     right: 60px;
     display: inline-block;
     .dropbtn {
@@ -56,6 +55,8 @@ article {
     margin-right: 30px;
     display: inline-block;
     background-image: url("/assets/bg.gif");
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .right-download {
     display: inline-block;
@@ -70,6 +71,11 @@ article {
       .img-logo {
         margin-bottom: 14px;
       }
+    }
+    .notification {
+      color: #F63;
+      font-size: 14px;
+      margin-bottom: 30px;
     }
     .tip {
       padding: 0 20px;
