@@ -49,8 +49,8 @@ article {
   justify-content: center;
   padding-bottom: 30px;
   .left-img {
-    height: 651px;
-    width: 537px;
+    height: 660px;
+    width: 550px;
     margin-right: 30px;
     display: inline-block;
     background-image: url("/assets/bg.gif");
@@ -129,7 +129,7 @@ article {
 }
 @media screen and (min-width: 930px) {
   .isvisibled {
-    height: 651px;
+    height: 660px;
   }
   .dropdown {
     right: 60px;
@@ -137,7 +137,6 @@ article {
 }
 @media screen and (max-width: 929px) {
   .isvisibled {
-    height: 461px;
     display: none !important;
   }
   .dropdown {
