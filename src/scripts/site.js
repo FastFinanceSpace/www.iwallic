@@ -6,7 +6,7 @@ $(document).ready(function() {
   if (window.location.href.indexOf('en') >= 0) {
     $('.dropbtn span').text('English');
   } else {
-    $('.dropbtn span').text('中文');
+    $('.dropbtn span').text('中文简体');
   }
   $('.dropbtn').click(function() {
     $('.dropdown-content').fadeIn('normal');
@@ -14,11 +14,20 @@ $(document).ready(function() {
   $('body').click(function(e) {
     e = e || window.event;
     var obj = e.target || e.srcElement;
-    if($(obj).closest(".dropbtn").length <=0){//点击的区域如果没有id为explain的标签，就将explain收起隐藏
+    if($(obj).closest(".dropbtn").length <=0){ // If the clicked area has no id comment, it will hide the explain
       $('.dropdown-content').fadeOut('normal');  
     }
   })
   $('.btn-ios').on('click', function() {
-    alert('coming soon...');
+    if (window.location.href.indexOf('en') >= 0) {
+      alert('Go to the official channel to get test qualification and other information.');
+    } else {
+      alert('去官方渠道获取测试资格等消息。');
+    }
+  })
+  $('.btn-android').on('click', function() {
+    $.getJSON('../assets/config/version.json', function(data) {
+      window.location.href = data.android;
+    });
   })
 });

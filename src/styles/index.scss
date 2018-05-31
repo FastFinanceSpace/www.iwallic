@@ -83,6 +83,7 @@ article {
       padding: 40px 15px 30px 15px;
       border-top: 1px solid #d4d7db;
       button {        
+        color: #fff;
         font-size: 16px;
         border-radius: 5px;
         width: 300px;
@@ -95,10 +96,6 @@ article {
         font-weight: bold;
         img {
           margin-right: 12px;
-        }
-        a {
-          color: #fff;
-          text-decoration: none;
         }
       }
       .btn-android {
@@ -121,7 +118,7 @@ article {
         color: #5c9bf1;
         cursor: pointer;
         text-decoration: underline;
-      }      
+      }
     }
   }
 }
