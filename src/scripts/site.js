@@ -32,8 +32,8 @@ $(document).ready(function() {
 
   // android download
   $('.btn-android').on('click', function() {
-    $.getJSON('../assets/config/version.json', function(data) {
-      window.location.href = data.android;
+    $.getJSON('../assets/config/app.json', function(data) {
+      window.location.href = data.version.android;
     });
   });
 
