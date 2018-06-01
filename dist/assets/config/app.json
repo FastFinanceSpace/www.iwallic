@@ -1,0 +1,57 @@
+{
+    "version": {
+        "code": "0.0.1",
+        "tag": "Beta",
+        "android": "https://api.iwallic.com/download/iWallic.beta.0.0.1.apk",
+        "ios": "https://iwallic.com",
+        "disclaimer": {
+            "action": "link",
+            "enabled": false,
+            "data": "https://iwallic.com"
+        }
+    },
+    "browser": {
+        "action": "link",
+        "enabled": true,
+        "value": "blolys.com",
+        "data": "https://blolys.com",
+        "tx": "https://blolys.com/#/transaction/"
+    },
+    "helpers": {
+        "walletGuide": {
+            "action": "link",
+            "enabled": false,
+            "data": "https://iwallic.com"
+        },
+        "transactionGuide": {
+            "action": "link",
+            "enabled": false,
+            "data": "https://iwallic.com"
+        },
+        "community": {
+            "action": "link",
+            "enabled": true,
+            "value": "bbs.iwallic.com",
+            "data": "https://bbs.iwallic.com/portal"
+        },
+        "contact": {
+            "action": "email",
+            "enabled": false,
+            "data": "contact@iwallic.com"
+        }
+    },
+    "net": {
+        "Test": {
+            "API": "https://teapi.iwallic.com",
+            "RPC": "https://rpc.t.iwallic.com"
+        },
+        "Main": {
+            "API": "https://api.iwallic.com",
+            "RPC": "https://rpc.m.iwallic.com"
+        },
+        "Priv": {
+            "API": "http://192.168.1.90:8080",
+            "RPC": "http://192.168.1.23:20332"
+        }
+    }
+}
