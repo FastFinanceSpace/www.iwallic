@@ -14,7 +14,6 @@ $(document).ready(function() {
   $(window).on("resize",function(){
     var h=window.innerHeight||document.body.clientHeight||document.documentElement.clientHeight;
     $("article").css("height",h);
-    console.log('s');
   });
   $('body').click(function(e) {
     e = e || window.event;
