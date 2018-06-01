@@ -11,6 +11,11 @@ $(document).ready(function() {
   $('.dropbtn').click(function() {
     $('.dropdown-content').fadeIn('normal');
   }) 
+  $(window).on("resize",function(){
+    var h=window.innerHeight||document.body.clientHeight||document.documentElement.clientHeight;
+    $("article").css("height",h);
+    console.log('s');
+  });
   $('body').click(function(e) {
     e = e || window.event;
     var obj = e.target || e.srcElement;
@@ -18,20 +23,11 @@ $(document).ready(function() {
       $('.dropdown-content').fadeOut('normal');  
     }
   })
-  // $('.btn-ios').on('click', function() {
-  //   if (window.location.href.indexOf('en') >= 0) {
-  //     alert('Go to the official channel to get test qualification and other information.');
-  //   } else {
-  //     alert('去官方渠道获取测试资格等消息。');
-  //   }
-  // })
   $('.btn-android').on('click', function() {
     $.getJSON('../assets/config/version.json', function(data) {
       window.location.href = data.android;
     });
   });
-  var x = 5;
-  var y = 15;
   var title = '';
   if (window.location.href.indexOf('en') >= 0) {
     title = 'Go to the official channel to get test qualification and other information.';
