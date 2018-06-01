@@ -3,6 +3,8 @@ import '../styles/global.scss';
 import '../styles/index.scss';
 
 $(document).ready(function() {
+  var h=window.innerHeight||document.body.clientHeight||document.documentElement.clientHeight;
+  $("article").css("height",h);
   if (window.location.href.indexOf('en') >= 0) {
     $('.dropbtn span').text('English');
   } else {
