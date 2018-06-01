@@ -1,8 +1,8 @@
 {
     "version": {
-        "code": "0.0.1",
+        "code": "0.0.2",
         "tag": "Beta",
-        "android": "https://api.iwallic.com/download/iWallic.beta.0.0.1.apk",
+        "android": "https://api.iwallic.com/download/iWallic.beta.0.0.2.apk",
         "ios": "https://iwallic.com",
         "disclaimer": {
             "action": "link",

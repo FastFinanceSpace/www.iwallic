@@ -3,8 +3,15 @@ import '../styles/global.scss';
 import '../styles/index.scss';
 
 $(document).ready(function() {
-  var h=window.innerHeight||document.body.clientHeight||document.documentElement.clientHeight;
-  $("article").css("height",h);
+  // article height
+  var articleHeight = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
+  $("article").css("height", articleHeight);
+  $(window).on("resize",function(){
+    articleHeight = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
+    $("article").css("height", articleHeight);
+  });
+
+  // toggle language
   if (window.location.href.indexOf('en') >= 0) {
     $('.dropbtn span').text('English');
   } else {
@@ -13,10 +20,8 @@ $(document).ready(function() {
   $('.dropbtn').click(function() {
     $('.dropdown-content').fadeIn('normal');
   }) 
-  $(window).on("resize",function(){
-    var h=window.innerHeight||document.body.clientHeight||document.documentElement.clientHeight;
-    $("article").css("height",h);
-  });
+
+  // toggle language dropcontent
   $('body').click(function(e) {
     e = e || window.event;
     var obj = e.target || e.srcElement;
@@ -24,11 +29,15 @@ $(document).ready(function() {
       $('.dropdown-content').fadeOut('normal');  
     }
   })
+
+  // android download
   $('.btn-android').on('click', function() {
     $.getJSON('../assets/config/version.json', function(data) {
       window.location.href = data.android;
     });
   });
+
+  // open test
   var title = '';
   if (window.location.href.indexOf('en') >= 0) {
     title = 'Go to the official channel to get test qualification and other information.';
