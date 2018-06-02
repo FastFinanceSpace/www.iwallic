@@ -44,7 +44,7 @@ $(document).ready(function() {
   } else {
     title = '去官方渠道获取测试资格等消息。';
   }
-  $(".download-tip").click(function(e) {
+  $(".btn-ios").click(function(e) {
     if (window.location.href.indexOf('en') >= 0) {
       if ($('.download-tip').text() === 'iOS download') {
         $('.download-tip').text('Ask iWallic team for testing');
