@@ -17,12 +17,22 @@ $(document).ready(function() {
   } else {
     $('.dropbtn span').text('中文简体');
   }
-  $('.dropbtn').click(function() {
+  $('.dropbtn').on('click', function() {
+    $('.dropdown-content').fadeIn('normal');
+  }) 
+  $('.dropbtn').on('touchstart', function() {
     $('.dropdown-content').fadeIn('normal');
   }) 
 
   // toggle language dropcontent
-  $('body').click(function(e) {
+  $('body').on('click', function(e) {
+    e = e || window.event;
+    var obj = e.target || e.srcElement;
+    if($(obj).closest(".dropbtn").length <=0){ // If the clicked area has no id comment, it will hide the explain
+      $('.dropdown-content').fadeOut('normal');  
+    }
+  })
+  $('body').on('touchend', function(e) {
     e = e || window.event;
     var obj = e.target || e.srcElement;
     if($(obj).closest(".dropbtn").length <=0){ // If the clicked area has no id comment, it will hide the explain
@@ -32,10 +42,23 @@ $(document).ready(function() {
 
   // android download
   $('.btn-android').on('click', function() {
-    $.getJSON('../assets/config/app.json', function(data) {
-      window.location.href = data.version.android;
-    });
+    if (is_weixn()) {
+      var winHeight = $(window).height();
+      $(".weixin-tip").css("height", winHeight);
+      if (window.location.href.indexOf('en') >= 0) {
+        $(".weixin-tip img").attr("src", "../assets/guide-en.png");
+      }
+      $(".weixin-tip").show();
+    } else {
+      $.getJSON('../assets/config/app.json', function(data) {
+        window.location.href = data.version.android;
+      });
+    }
   });
+
+  $('.weixin-tip button').on('click', function() {
+    $(".weixin-tip").hide();
+  })
 
   // open test
   var title = '';
@@ -47,16 +70,26 @@ $(document).ready(function() {
   $(".btn-ios").click(function(e) {
     if (window.location.href.indexOf('en') >= 0) {
       if ($('.download-tip').text() === 'iOS download') {
-        $('.download-tip').text('Ask iWallic team for testing');
+        $('.download-tip').text('You have not yet been qualified');
       } else {
         $('.download-tip').text('iOS download');
       }
     } else {
       if ($('.download-tip').text() === 'iOS 下载') {
-        $('.download-tip').text('联系官方参与公测');
+        $('.download-tip').text('您尚未获得资格');
       } else {
         $('.download-tip').text('iOS 下载');
       }
     }
   });
+
+  // is wechat brower
+  function is_weixn(){    
+    var ua = navigator.userAgent.toLowerCase();    
+    if(ua.match(/MicroMessenger/i)=="micromessenger") {    
+        return true;    
+    } else {    
+        return false;    
+    }    
+} 
 });
