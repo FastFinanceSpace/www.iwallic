@@ -5,7 +5,9 @@ html {
   width: 100%;
 }
 body {
-  width: 100%;
+  // width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   min-height: 100%;
   font-size: 14px;
   background: #feffff;
