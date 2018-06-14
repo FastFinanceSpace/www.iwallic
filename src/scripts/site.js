@@ -5,9 +5,21 @@ import '../styles/index.scss';
 $(document).ready(function() {
   // article height
   var articleHeight = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
+  articleHeight -= 42;
+  if ($('.left-img').css('display') === 'block') {
+    articleHeight = articleHeight > 665 ? articleHeight : 665;
+  } else {
+    articleHeight = articleHeight > 450 ? articleHeight : 450;
+  }
   $("article").css("height", articleHeight);
   $(window).on("resize",function(){
     articleHeight = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
+    articleHeight -= 42;
+    if ($('.left-img').css('display') === 'block') {
+      articleHeight = articleHeight > 665 ? articleHeight : 665;
+    } else {
+      articleHeight = articleHeight > 450 ? articleHeight : 450;
+    }
     $("article").css("height", articleHeight);
   });
 
@@ -51,7 +63,7 @@ $(document).ready(function() {
       $(".weixin-tip").show();
     } else {
       $.getJSON('../assets/config/app.json', function(data) {
-        window.location.href = data.version.android;
+        window.location.href = data.version_android.url;
       });
     }
   });

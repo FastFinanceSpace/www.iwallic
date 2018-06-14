@@ -69,7 +69,6 @@ article {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -42px;
   .left-img {
     height: 665px;
     width: 550px;
@@ -191,7 +190,8 @@ article {
   }
 }
 @media screen and (min-width: 930px) {
-  .isvisibled {
+  .left-img {
+    display: block;
     height: 665px;
   }
   .blolys-btn {
@@ -200,7 +200,7 @@ article {
   }
 }
 @media screen and (max-width: 929px) {
-  .isvisibled {
+  .left-img {
     display: none !important;
   }
   .blolys-btn {
