@@ -135,17 +135,22 @@ article {
       }
       .btn-android {
         background: #5c9bf1;
-        margin-bottom: 20px;
         &:hover {
           background: #4A88DB;
         }
       }
-      .btn-ios {
-        background: #5cd0f1;
-        &:hover {
-          background: #47b9d9;
-        }
-      }      
+    }
+    .pc-download {
+      padding: 30px 15px 30px 15px;
+      border-top: 1px solid #d4d7db;
+      p {
+        color: #646165;
+        margin-bottom: 10px;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
     }
     .web-wallet {
       a {

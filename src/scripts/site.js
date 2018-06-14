@@ -5,6 +5,7 @@ import '../styles/index.scss';
 $(document).ready(function() {
   // article height
   var articleHeight = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
+  var articleWidth = window.innerWidth || document.body.clientWidth || document.documentElement.clientWidth;
   articleHeight -= 42;
   if ($('.left-img').css('display') === 'block') {
     articleHeight = articleHeight > 665 ? articleHeight : 665;
@@ -12,8 +13,17 @@ $(document).ready(function() {
     articleHeight = articleHeight > 665 ? articleHeight : 500;
   }
   $("article").css("height", articleHeight);
+  if (articleWidth > 930) {
+    $(".download").hide();
+    $(".pc-download").show();
+  } else {
+    $(".download").show();
+    $(".pc-download").hide();
+  }
+
   $(window).on("resize",function(){
     articleHeight = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
+    articleWidth = window.innerWidth || document.body.clientWidth || document.documentElement.clientWidth;
     articleHeight -= 42;
     if ($('.left-img').css('display') === 'block') {
       articleHeight = articleHeight > 665 ? articleHeight : 665;
@@ -21,6 +31,13 @@ $(document).ready(function() {
       articleHeight = articleHeight > 700 ? articleHeight : 500;
     }
     $("article").css("height", articleHeight);
+    if (articleWidth > 930) {
+      $(".download").hide();
+      $(".pc-download").show();
+    } else {
+      $(".download").show();
+      $(".pc-download").hide();
+    }
   });
 
   // toggle language
@@ -60,7 +77,7 @@ $(document).ready(function() {
       if (window.location.href.indexOf('en') >= 0) {
         $(".weixin-tip img").attr("src", "../assets/guide-en.png");
       }
-      $(".weixin-tip").show();
+      $(".weixin-tip").fadeIn();
     } else {
       $.getJSON('../assets/config/app.json', function(data) {
         window.location.href = data.version_android.url;
@@ -69,31 +86,8 @@ $(document).ready(function() {
   });
 
   $('.weixin-tip button').on('click', function() {
-    $(".weixin-tip").hide();
+    $(".weixin-tip").fadeOut();
   })
-
-  // open test
-  var title = '';
-  if (window.location.href.indexOf('en') >= 0) {
-    title = 'Go to the official channel to get test qualification and other information.';
-  } else {
-    title = '去官方渠道获取测试资格等消息。';
-  }
-  $(".btn-ios").click(function(e) {
-    if (window.location.href.indexOf('en') >= 0) {
-      if ($('.download-tip').text() === 'iOS download') {
-        $('.download-tip').text('You have not yet been qualified');
-      } else {
-        $('.download-tip').text('iOS download');
-      }
-    } else {
-      if ($('.download-tip').text() === 'iOS 下载') {
-        $('.download-tip').text('您尚未获得资格');
-      } else {
-        $('.download-tip').text('iOS 下载');
-      }
-    }
-  });
 
   // is wechat browser
   function is_weixn(){    
