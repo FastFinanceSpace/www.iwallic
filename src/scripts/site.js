@@ -9,7 +9,7 @@ $(document).ready(function() {
   if ($('.left-img').css('display') === 'block') {
     articleHeight = articleHeight > 665 ? articleHeight : 665;
   } else {
-    articleHeight = articleHeight > 450 ? articleHeight : 450;
+    articleHeight = articleHeight > 665 ? articleHeight : 500;
   }
   $("article").css("height", articleHeight);
   $(window).on("resize",function(){
@@ -18,7 +18,7 @@ $(document).ready(function() {
     if ($('.left-img').css('display') === 'block') {
       articleHeight = articleHeight > 665 ? articleHeight : 665;
     } else {
-      articleHeight = articleHeight > 450 ? articleHeight : 450;
+      articleHeight = articleHeight > 700 ? articleHeight : 500;
     }
     $("article").css("height", articleHeight);
   });
