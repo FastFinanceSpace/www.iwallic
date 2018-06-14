@@ -83,7 +83,7 @@ $(document).ready(function() {
     }
   });
 
-  // is wechat brower
+  // is wechat browser
   function is_weixn(){    
     var ua = navigator.userAgent.toLowerCase();    
     if(ua.match(/MicroMessenger/i)=="micromessenger") {    
