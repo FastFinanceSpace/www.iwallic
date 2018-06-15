@@ -1,13 +1,13 @@
 {
     "version_ios": {
-        "code": "0.0.4",
+        "code": "0.0.5",
         "tag": "Beta",
         "url": "https://fir.im/iwallic"
     },
     "version_android": {
-        "code": "0.0.4",
+        "code": "0.0.5",
         "tag": "Beta",
-        "url": "https://api.iwallic.com/download/iWallic.beta.0.0.4.apk"
+        "url": "https://api.iwallic.com/download/iWallic.beta.0.0.5.apk"
     },
     "disclaimer": {
         "action": "link",
