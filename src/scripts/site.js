@@ -79,9 +79,15 @@ $(document).ready(function() {
       }
       $(".weixin-tip").fadeIn();
     } else {
-      $.getJSON('../assets/config/app.json', function(data) {
-        window.location.href = data.version_android.url;
-      });
+      $.ajax({
+        type: "POST",
+        url: "https://api.iwallic.com/api/iwallic",
+        dataType: 'json',
+        data: JSON.stringify({ "method": "fetchIwallicConfig", "params": [] }),
+        success: function(data) {
+          window.location.href = data.result.version_android.url;
+        }
+      })
     }
   });
 
