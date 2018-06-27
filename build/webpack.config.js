@@ -51,6 +51,22 @@ plugins: [
       { from: 'src/assets', to: 'assets' },
     ]),
     new HtmlWebpackPlugin({
+      template: 'src/assets/disclaimer/index.html',
+      inject: 'body',
+      xhtml: true,
+      metadata: {
+        isDevServer: false
+      },
+      minify: {
+        caseSensitive: true,
+        collapseWhitespace: true,
+        keepClosingSlash: true
+      },
+      chunks: 'all',
+      excludeChunks: [],
+      filename: 'assets/disclaimer/index.html'
+    }),
+    new HtmlWebpackPlugin({
       template: 'src/sites/cn/index.html',
       inject: 'body',
       xhtml: true,
