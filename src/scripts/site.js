@@ -10,7 +10,7 @@ $(document).ready(function () {
 		url: "https://iwallic.forchain.info/client/index/app_version/detail",
 		dataType: 'json',
 		success: function (data) {
-			$('.version').text(data.data.name);
+			$('.version').text('v' + data.data.name);
 			downloadAddress = data.data.url;
 		}
 	})
