@@ -122,8 +122,8 @@ module.exports = {
 		})
 	],
 	devServer: {
-		port: 3002,
-		host: '0.0.0.0',
+		port: 4200,
+		host: '127.0.0.1',
 		historyApiFallback: true,
 		watchOptions: {
 			ignored: /node_modules/

@@ -3,6 +3,18 @@ import '../styles/global.scss';
 import '../styles/index.scss';
 
 $(document).ready(function() {
+	var downloadAddress;
+	// apk
+	$.ajax({
+		type: "GET",
+		url: "https://iwallic.forchain.info/client/index/app_version/detail",
+		dataType: 'json',
+		success: function(data) {
+			$('.version').text(data.data.name);
+			downloadAddress = data.data.url;
+		}
+	})
+	
 	// article height
 	var articleHeight = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
 	var articleWidth = window.innerWidth || document.body.clientWidth || document.documentElement.clientWidth;
@@ -79,15 +91,7 @@ $(document).ready(function() {
 			}
 			$(".weixin-tip").fadeIn();
 		} else {
-			$.ajax({
-				type: "POST",
-				url: "https://api.iwallic.com/api/iwallic",
-				dataType: 'json',
-				data: JSON.stringify({ "method": "fetchIwallicConfig", "params": [] }),
-				success: function(data) {
-					window.location.href = data.result.version_android.url;
-				}
-			})
+			window.location.href = downloadAddress;
 		}
 	});
 
