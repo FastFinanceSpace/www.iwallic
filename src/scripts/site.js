@@ -19,7 +19,11 @@ $(document).ready(function () {
 	var articleHeight = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
 	var articleWidth = window.innerWidth || document.body.clientWidth || document.documentElement.clientWidth;
 	articleHeight -= 42;
-	articleHeight = articleHeight > 665 ? articleHeight : 665;
+	if ($('.left-img').css('display') === 'block') {
+		articleHeight = articleHeight > 665 ? articleHeight : 665;
+	} else {
+		articleHeight = articleHeight > 665 ? articleHeight : 600;
+	}
 	$("article").css("height", articleHeight);
 	if (articleWidth > 930) {
 		$(".download").hide();
@@ -33,7 +37,11 @@ $(document).ready(function () {
 		articleHeight = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
 		articleWidth = window.innerWidth || document.body.clientWidth || document.documentElement.clientWidth;
 		articleHeight -= 42;
-		articleHeight = articleHeight > 665 ? articleHeight : 665;
+		if ($('.left-img').css('display') === 'block') {
+			articleHeight = articleHeight > 665 ? articleHeight : 665;
+		} else {
+			articleHeight = articleHeight > 665 ? articleHeight : 600;
+		}
 		$("article").css("height", articleHeight);
 		if (articleWidth > 930) {
 			$(".download").hide();
