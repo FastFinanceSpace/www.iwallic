@@ -106,13 +106,13 @@ article {
 			font-size: 14px;
 			margin-bottom: 16px;
 		}
-		.tip {
-			padding: 0 20px;
-			text-indent: 20px;
-			color: #646165;
-			margin-bottom: 30px;
-			font-size: 14px;
+		.update-detail {
 			text-align: left;
+			padding: 0 20px;
+			margin-bottom: 30px;
+			.center {
+				text-align: center;
+			}
 		}
 		.download {
 			padding: 30px 15px 30px 15px;

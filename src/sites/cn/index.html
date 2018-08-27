@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"
+	/>
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 	<meta name="HandheldFriendly" content="True" />
@@ -31,6 +33,7 @@
 	<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 	<title>iWallic</title>
 </head>
+
 <body>
 	<nav>
 		<div class="dropdown">
@@ -57,7 +60,15 @@
 				<img src="/assets/fontlogo.svg" alt="iwallic" width="126px" height="28px">
 			</div>
 			<div class="notification">全面公测中 <b class="version"></b></div>
-			<div class="tip">一个 NEO 系轻钱包 —— 来自 E-Studio 社区</div>
+			<!-- <div class="tip">一个 NEO 系轻钱包 —— 来自 E-Studio 社区</div> -->
+			<div class="update-detail">
+				<p style="text-align:left">由于近期 NEO 主网调整，iwallic 1.0.2 进行几个重大调整。更新主要内容包括：</p>
+				<br>
+				<p class="center">1. 强化交易保护</p>
+				<p class="center">2. 底层重要更新</p>
+				<p class="center">3. 修复已知问题</p><br>
+				<p class="center" style="color:red;font-weight:bolder">请务必更新至最新版本使用！</p>	
+			</div>
 			<div class="download">
 				<button class="btn-android"><img src="/assets/img-ad.png">Android 下载</button>
 			</div>
@@ -70,22 +81,23 @@
 	</article>
 	<div class="weixin-tip">
 		<p>
-			<img src="/assets/guide.png" alt="微信打开"/>
+			<img src="/assets/guide.png" alt="微信打开" />
 		</p>
 		<button>知道了</button>
 	</div>
 	<% if (htmlWebpackPlugin.options.metadata.isDevServer) { %>
-	<!-- Webpack Dev Server reload -->
-	<script src="/webpack-dev-server.js"></script>
-	<% } %>
-	<script>
-		var _hmt = _hmt || [];
-		(function() {
-			var hm = document.createElement("script");
-			hm.src = "https://hm.baidu.com/hm.js?401fb76b17a1ae239571dc7876b321ab";
-			var s = document.getElementsByTagName("script")[0]; 
-			s.parentNode.insertBefore(hm, s);
-		})();
-	</script>
+		<!-- Webpack Dev Server reload -->
+		<script src="/webpack-dev-server.js"></script>
+		<% } %>
+			<script>
+				var _hmt = _hmt || [];
+				(function () {
+					var hm = document.createElement("script");
+					hm.src = "https://hm.baidu.com/hm.js?401fb76b17a1ae239571dc7876b321ab";
+					var s = document.getElementsByTagName("script")[0];
+					s.parentNode.insertBefore(hm, s);
+				})();
+			</script>
 </body>
+
 </html>

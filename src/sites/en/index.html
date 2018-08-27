@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"
+	/>
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 	<meta property="og:title" content="iWallic" />
@@ -27,6 +29,7 @@
 	<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 	<title>iWallic</title>
 </head>
+
 <body>
 	<nav>
 		<div class="dropdown">
@@ -53,7 +56,16 @@
 				<img src="/assets/fontlogo.svg" alt="iwallic" width="126px" height="28px">
 			</div>
 			<div class="notification">Open Beta <b class="version"></b></div>
-			<div class="tip">A lightweight NEO wallet — from E-Studio community</div>
+			<!-- <div class="tip">A lightweight NEO wallet — from E-Studio community</div> -->
+			<div class="update-detail">
+				<p style="text-align:left">Announcement about major adjustments of iwallic 1.0.2 Due to NEO mainnet adjustment, iwallic v1.0.2 has made several major adjustments as follows: </p>
+				<br>
+				<p>1. Enhanced transaction protection</p>
+				<p>2. Important updates of infrastructure</p>
+				<p>3. Bug fixes</p>
+				<br>
+				<p style="color:red;font-weight:bolder">Please update to the latest version for a better experience!</p>
+			</div>
 			<div class="download">
 				<button class="btn-android"><img src="/assets/img-ad.png">Android download</button>
 			</div>
@@ -66,22 +78,23 @@
 	</article>
 	<div class="weixin-tip">
 		<p>
-			<img alt="open in wechat"/>
+			<img alt="open in wechat" />
 		</p>
 		<button>Got it</button>
 	</div>
 	<% if (htmlWebpackPlugin.options.metadata.isDevServer) { %>
-	<!-- Webpack Dev Server reload -->
-	<script src="/webpack-dev-server.js"></script>
-	<% } %>
-	<script>
-		var _hmt = _hmt || [];
-		(function() {
-			var hm = document.createElement("script");
-			hm.src = "https://hm.baidu.com/hm.js?401fb76b17a1ae239571dc7876b321ab";
-			var s = document.getElementsByTagName("script")[0]; 
-			s.parentNode.insertBefore(hm, s);
-		})();
-	</script>
+		<!-- Webpack Dev Server reload -->
+		<script src="/webpack-dev-server.js"></script>
+		<% } %>
+			<script>
+				var _hmt = _hmt || [];
+				(function () {
+					var hm = document.createElement("script");
+					hm.src = "https://hm.baidu.com/hm.js?401fb76b17a1ae239571dc7876b321ab";
+					var s = document.getElementsByTagName("script")[0];
+					s.parentNode.insertBefore(hm, s);
+				})();
+			</script>
 </body>
+
 </html>
