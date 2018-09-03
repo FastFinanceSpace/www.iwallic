@@ -22,7 +22,11 @@ $(document).ready(function () {
 	if ($('.left-img').css('display') === 'block') {
 		articleHeight = articleHeight > 665 ? articleHeight : 665;
 	} else {
-		articleHeight = articleHeight > 665 ? articleHeight : 600;
+		if (window.location.href.indexOf('en') >= 0) {
+			articleHeight = articleHeight > 665 ? articleHeight : 790;
+		} else {
+			articleHeight = articleHeight > 665 ? articleHeight : 700;
+		}
 	}
 	$("article").css("height", articleHeight);
 	if (articleWidth > 930) {
@@ -40,7 +44,11 @@ $(document).ready(function () {
 		if ($('.left-img').css('display') === 'block') {
 			articleHeight = articleHeight > 665 ? articleHeight : 665;
 		} else {
-			articleHeight = articleHeight > 665 ? articleHeight : 600;
+			if (window.location.href.indexOf('en') >= 0) {
+				articleHeight = articleHeight > 665 ? articleHeight : 790;
+			} else {
+				articleHeight = articleHeight > 665 ? articleHeight : 700;
+			}
 		}
 		$("article").css("height", articleHeight);
 		if (articleWidth > 930) {
