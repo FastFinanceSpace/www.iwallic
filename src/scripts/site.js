@@ -19,19 +19,18 @@ $(document).ready(function () {
 	var articleHeight = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
 	var articleWidth = window.innerWidth || document.body.clientWidth || document.documentElement.clientWidth;
 	articleHeight -= 42;
-	// if ($('.left-img').css('display') === 'block') {
-	// 	articleHeight = articleHeight > 665 ? articleHeight : 665;
-	// } else {
-	// 	if (window.location.href.indexOf('en') >= 0) {
-	// 		articleHeight = articleHeight > 665 ? articleHeight : 850;
-	// 	} else {
-	// 		articleHeight = articleHeight > 665 ? articleHeight : 700;
-	// 	}
-	// }
-	if (window.location.href.indexOf('en') >= 0) {
-		articleHeight = articleHeight > 870 ? articleHeight : 870;
+	if ($('.left-img').css('display') === 'block') {
+		if (window.location.href.indexOf('en') >= 0) {
+			articleHeight = articleHeight > 870 ? articleHeight : 870;
+		} else {
+			articleHeight = articleHeight > 720 ? articleHeight : 720;
+		}
 	} else {
-		articleHeight = articleHeight > 720 ? articleHeight : 720;
+		if (window.location.href.indexOf('en') >= 0) {
+			articleHeight = articleHeight > 820 ? articleHeight : 820;
+		} else {
+			articleHeight = articleHeight > 660 ? articleHeight : 660;
+		}
 	}
 	$("article").css("height", articleHeight);
 	if (articleWidth > 930) {
@@ -46,19 +45,18 @@ $(document).ready(function () {
 		articleHeight = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
 		articleWidth = window.innerWidth || document.body.clientWidth || document.documentElement.clientWidth;
 		articleHeight -= 42;
-		// if ($('.left-img').css('display') === 'block') {
-		// 	articleHeight = articleHeight > 665 ? articleHeight : 665;
-		// } else {
-		// 	if (window.location.href.indexOf('en') >= 0) {
-		// 		articleHeight = articleHeight > 665 ? articleHeight : 870;
-		// 	} else {
-		// 		articleHeight = articleHeight > 665 ? articleHeight : 700;
-		// 	}
-		// }
-		if (window.location.href.indexOf('en') >= 0) {
-			articleHeight = articleHeight > 870 ? articleHeight : 870;
+		if ($('.left-img').css('display') === 'block') {
+			if (window.location.href.indexOf('en') >= 0) {
+				articleHeight = articleHeight > 870 ? articleHeight : 870;
+			} else {
+				articleHeight = articleHeight > 720 ? articleHeight : 720;
+			}
 		} else {
-			articleHeight = articleHeight > 720 ? articleHeight : 720;
+			if (window.location.href.indexOf('en') >= 0) {
+				articleHeight = articleHeight > 820 ? articleHeight : 820;
+			} else {
+				articleHeight = articleHeight > 660 ? articleHeight : 660;
+			}
 		}
 		$("article").css("height", articleHeight);
 		if (articleWidth > 930) {
