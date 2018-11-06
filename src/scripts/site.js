@@ -21,15 +21,15 @@ $(document).ready(function () {
 	articleHeight -= 42;
 	if ($('.left-img').css('display') === 'block') {
 		if (window.location.href.indexOf('en') >= 0) {
-			articleHeight = articleHeight > 870 ? articleHeight : 870;
+			articleHeight = articleHeight > 905 ? articleHeight : 905;  // 865
 		} else {
-			articleHeight = articleHeight > 720 ? articleHeight : 720;
+			articleHeight = articleHeight > 753 ? articleHeight : 753;  // 713
 		}
 	} else {
 		if (window.location.href.indexOf('en') >= 0) {
-			articleHeight = articleHeight > 820 ? articleHeight : 820;
+			articleHeight = articleHeight > 820 ? articleHeight : 820;  // 780
 		} else {
-			articleHeight = articleHeight > 660 ? articleHeight : 660;
+			articleHeight = articleHeight > 668 ? articleHeight : 668;  // 628
 		}
 	}
 	$("article").css("height", articleHeight);
@@ -47,15 +47,15 @@ $(document).ready(function () {
 		articleHeight -= 42;
 		if ($('.left-img').css('display') === 'block') {
 			if (window.location.href.indexOf('en') >= 0) {
-				articleHeight = articleHeight > 870 ? articleHeight : 870;
+				articleHeight = articleHeight > 905 ? articleHeight : 905;
 			} else {
-				articleHeight = articleHeight > 720 ? articleHeight : 720;
+				articleHeight = articleHeight > 753 ? articleHeight : 753;
 			}
 		} else {
 			if (window.location.href.indexOf('en') >= 0) {
 				articleHeight = articleHeight > 820 ? articleHeight : 820;
 			} else {
-				articleHeight = articleHeight > 660 ? articleHeight : 660;
+				articleHeight = articleHeight > 668 ? articleHeight : 668;
 			}
 		}
 		$("article").css("height", articleHeight);
