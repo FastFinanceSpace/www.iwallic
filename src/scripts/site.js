@@ -15,17 +15,7 @@ $(document).ready(function() {
         }
     })
 
-    // article height
-    var articleHeight = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
-    var articleWidth = window.innerWidth || document.body.clientWidth || document.documentElement.clientWidth;
-    var rightHeight = $('.right-download').height();
-    articleHeight -= 42;
-    if ($('.left-img').css('display') === 'block') {
-        rightHeight = rightHeight > 665 ? rightHeight : 665;
-    }
-    rightHeight += 30;
-    articleHeight = rightHeight > articleHeight ? rightHeight : articleHeight;
-    $("article").css("height", articleHeight);
+    var articleWidth = document.body.clientWidth;
     if (articleWidth > 930) {
         $(".download").hide();
         $(".pc-download").show();
@@ -35,16 +25,7 @@ $(document).ready(function() {
     }
 
     $(window).on("resize", function() {
-        articleHeight = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
-        articleWidth = window.innerWidth || document.body.clientWidth || document.documentElement.clientWidth;
-        rightHeight = $('.right-download').height();
-        articleHeight -= 42;
-        if ($('.left-img').css('display') === 'block') {
-            rightHeight = rightHeight > 665 ? rightHeight : 665;
-        }
-        rightHeight += 30;
-        articleHeight = rightHeight > articleHeight ? rightHeight : articleHeight;
-        $("article").css("height", articleHeight);
+        articleWidth = document.body.clientWidth;
         if (articleWidth > 930) {
             $(".download").hide();
             $(".pc-download").show();
@@ -93,7 +74,9 @@ $(document).ready(function() {
             }
             $(".weixin-tip").fadeIn();
         } else {
-            window.location.href = downloadAddress;
+            if (downloadAddress) {
+                window.location.href = downloadAddress;
+            }
         }
     });
 
