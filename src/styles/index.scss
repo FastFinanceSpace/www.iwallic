@@ -68,7 +68,9 @@ nav {
 article {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+    justify-content: center;
+    min-height: calc(100% - 42px);
+    overflow: auto;
 	.left-img {
 		height: 665px;
 		width: 550px;
@@ -90,7 +92,8 @@ article {
 	.right-download {
 		display: inline-block;
 		width: 330px;
-		text-align: center;
+        text-align: center;
+        margin: 30px 0;        
 		.logo {
 			margin-bottom: 16px;
 			img {
