@@ -1,5 +1,5 @@
-# www.iwallic
-
+# fastfinance.space
+FFS
 Homepage of iWallic.
 
 ## How to run
